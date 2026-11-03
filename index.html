@@ -1,97 +1,900 @@
-CACHAY STORE
-Plataforma de estudios de crédito
-Tu próximo equipo,
-a crédito
-Elige tu entidad, haz tu estudio y cuando tengas tu cupo aprobado escríbenos: te asesoramos con el mejor dispositivo para ti.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cachay Store — Estudios de Crédito</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-🏦 Varias entidades
-📱 Asesoría personalizada
-📍 Medellín
-⚠️
-¡Importante! No aceptes el crédito todavía
-Las entidades financieras te enviarán un preaprobado. No lo apruebes aún. Primero define con certeza cuál es el dispositivo que deseas llevar a crédito. Envíanos la captura con el cupo aprobado y te asesoramos en qué dispositivo se ajusta mejor a ese valor.
+  :root {
+    --red: #E02020;
+    --red-dark: #B01818;
+    --black: #0D0D0D;
+    --white: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-mid: #E0E0E0;
+    --gray-text: #555;
+    --radius: 10px;
+  }
 
-Cómo funciona
-01
-Elige la entidad financiera y completa el estudio
-02
-Recibe el preaprobado — no lo apruebes aún
-03
-Envíanos la captura y te asesoramos con el mejor dispositivo
-04
-Aprueba el crédito y recoge tu equipo
-Entidades financieras
-🏦
-Banco de Bogotá
-Crédito digital bancario
-Realiza tu solicitud de crédito con Banco de Bogotá de forma digital.
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--gray-light);
+    color: var(--black);
+    min-height: 100vh;
+  }
 
-⚠️ Información importante: puedes hacer la solicitud, pero no finalices el proceso ni aceptes el crédito o cupo. Debes acercarte a nuestro punto físico para continuar y finalizar tu crédito.
-Iniciar estudio
-🟠
-Sumas + Pay
-Estudio rápido y sencillo
-Completa tu solicitud de crédito a través del portal de Sumas + Pay. El proceso es rápido y 100% digital.
+  /* HEADER */
+  header {
+    background: var(--black);
+    padding: 24px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 
-Iniciar estudio
-🔴
-EsmiOpción
-Autogestión del cliente
-Plataforma de autogestión para que el cliente gestione su cupo de crédito de forma autónoma y digital.
+  header img {
+    height: 72px;
+    object-fit: contain;
+    filter: brightness(10);
+  }
 
-Iniciar autogestión
-🟡
-Bancolombia
-Verificación de cupo
-Consulta y verifica tu cupo disponible con Bancolombia de forma inmediata y segura.
+  header .tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
 
-Verificar cupo
-💳
-Sistecrédito
-Fácil, rápido y 100% digital
-Solicita tu cupo con Sistecrédito en minutos. 100% digital, sin filas y sin complicaciones.
+  /* HERO BANNER */
+  .hero {
+    background: var(--red);
+    padding: 36px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
 
-Solicitar cupo
-⚡
-MiCredit
-Para reportados & sin historial
-Opción ideal para personas reportadas o sin historial crediticio. La cuota inicial depende del monto aprobado y el dispositivo elegido.
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border: 40px solid rgba(255,255,255,0.07);
+    border-radius: 50%;
+  }
 
-⚡ Aplica con cuota inicial
-💡 Con esta entidad se maneja un porcentaje de cuota inicial (opción para reportados) y el teléfono se enrola con la entidad.
-Iniciar autogestión
-Alo Credit
-Alo Credit
-Disponible en tienda
-Contamos con esta entidad aliada. El estudio y el proceso se realizan únicamente en nuestro punto físico.
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -30px;
+    width: 180px; height: 180px;
+    border: 35px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
 
-📍 Solo en punto físico
-🏬 Acércate a la tienda
-E-Credit
-E-Credit
-Cash 24/7 · Disponible en tienda
-Contamos con esta entidad aliada. El estudio y el proceso se realizan únicamente en nuestro punto físico.
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
 
-📍 Solo en punto físico
-🏬 Acércate a la tienda
-Siguiente paso
-¿Ya tienes tu preaprobado?
-Envíanos la captura de pantalla con el cupo aprobado y te asesoramos sobre qué dispositivo puedes llevarte con ese valor.
+  .hero p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
 
-Ya tengo mi preaprobado
-Antes de venir
-🪪
-¡Muy importante!
-Debe venir la persona que hará el crédito
-con su cédula física
-Sin la persona titular y su cédula física original no es posible realizar ni finalizar el crédito. No se aceptan fotocopias ni documentos digitales.
+  /* ALERT BOX */
+  .alert-box {
+    max-width: 720px;
+    margin: 32px auto 0;
+    background: var(--white);
+    border-left: 5px solid var(--red);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 20px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
 
-📍
-Cachay Store — Nos trasladamos
-Cra 50 # 52-126, Local 101C
-Pasaje Comercial Palace Junín
-Medellín, Colombia
+  .alert-icon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
 
-Ver en Google Maps →
+  .alert-box h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--red);
+    margin-bottom: 6px;
+  }
 
-© 2025 Cachay Store — Todos los derechos reservados
+  .alert-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--gray-text);
+  }
+
+  .alert-box strong {
+    color: var(--black);
+  }
+
+  /* MAIN CONTENT */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-mid);
+  }
+
+  /* ENTITY CARDS */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-mid);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    padding: 16px 20px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--gray-mid);
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  .card-icon.red { background: var(--red); }
+  .card-icon.white { background: var(--white); border: 1px solid var(--gray-mid); }
+
+  .card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+    color: var(--gray-text);
+    margin-top: 2px;
+  }
+
+  .card-body {
+    padding: 14px 20px 18px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--gray-text);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .card-tag {
+    display: inline-block;
+    background: var(--gray-light);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-bottom: 14px;
+    border: 1px solid var(--gray-mid);
+  }
+
+  .card-tag.special {
+    background: #FFF9E6;
+    border-color: #FFD966;
+    color: #7A5C00;
+  }
+
+  .btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 7px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+
+  .btn-link:hover { background: #222; }
+  .btn-link.red-btn { background: var(--red); }
+  .btn-link.red-btn:hover { background: var(--red-dark); }
+
+  .btn-link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--black);
+    border-radius: 14px;
+    padding: 36px 28px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .cta-section .step-label {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .cta-section h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+  }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-whatsapp:hover {
+    background: #1DA950;
+    transform: scale(1.03);
+  }
+
+  .btn-whatsapp svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+  .steps-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+    justify-content: center;
+  }
+
+  .step-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-mid);
+    padding: 14px 18px;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+  }
+
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .step-text {
+    font-size: 13px;
+    color: var(--gray-text);
+    line-height: 1.5;
+  }
+
+  /* PHYSICAL NOTE */
+  .physical-note {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-mid);
+    padding: 22px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .physical-note .icon {
+    font-size: 26px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .physical-note h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+  }
+
+  .physical-note p {
+    font-size: 13px;
+    color: var(--gray-text);
+    line-height: 1.6;
+  }
+
+  .address-box {
+    background: var(--black);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .address-box .icon { font-size: 24px; flex-shrink: 0; }
+
+  .address-box p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  .address-box strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+
+  /* LOGOS ENTIDADES */
+  .card-logo {
+    width: 72px; height: 44px; flex-shrink: 0;
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4px;
+  }
+  .card-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+  /* NOTAS */
+  .note-box {
+    background: #FFF6F6;
+    border: 1px solid #FFCACA;
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #5a2a2a;
+    margin-bottom: 14px;
+  }
+  .note-box strong { color: var(--red-dark); }
+  .note-soft {
+    font-size: 12px; line-height: 1.5; color: var(--gray-text);
+    background: var(--gray-light); border-radius: 6px;
+    padding: 8px 12px; margin-bottom: 14px;
+  }
+  .btn-static {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 12px;
+    background: var(--gray-light); color: var(--black);
+    border: 1.5px dashed #bbb; border-radius: 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  }
+
+  /* AVISO CEDULA (LLAMATIVO) */
+  .id-alert {
+    background: var(--red);
+    border-radius: 14px;
+    padding: 30px 22px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px var(--black), 0 10px 30px rgba(224,32,32,.35);
+    animation: pulseAlert 2.2s ease-in-out infinite;
+  }
+  .id-alert::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(-45deg, rgba(0,0,0,.07) 0 14px, transparent 14px 28px);
+    pointer-events: none;
+  }
+  .id-alert > * { position: relative; }
+  .id-alert .big-icon { font-size: 44px; line-height: 1; margin-bottom: 8px; }
+  .id-alert h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(26px, 6vw, 40px);
+    font-weight: 900; text-transform: uppercase; line-height: 1.05;
+    margin-bottom: 12px; letter-spacing: .5px;
+  }
+  .id-alert .req {
+    display: inline-block; background: var(--white); color: var(--black);
+    border-radius: 8px; padding: 10px 16px; margin: 4px 0 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(18px, 4.5vw, 24px); font-weight: 800; text-transform: uppercase;
+  }
+  .id-alert .req span { color: var(--red); }
+  .id-alert p { font-size: 14px; line-height: 1.6; max-width: 520px; margin: 0 auto; opacity: .95; }
+  @keyframes pulseAlert {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.012); }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  footer span { color: var(--red); }
+
+  @media (max-width: 500px) {
+    header { padding: 20px 16px; }
+    main { padding: 28px 14px 50px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .alert-box { padding: 16px 16px; }
+    .cta-section { padding: 28px 16px; }
+  }
+
+  /* ============ TEMA MODERNO ============ */
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: #0A0A0A;
+    color: #fff;
+    position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(600px 400px at 50% -80px, rgba(224,32,32,.28), transparent 70%),
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: auto, 40px 40px, 40px 40px;
+  }
+  .hero-m, .alert-box, main, footer { position: relative; z-index: 1; }
+
+  .hero-m { text-align: center; padding: 48px 22px 28px; max-width: 720px; margin: 0 auto; }
+  .logo-card {
+    width: 150px; height: 150px; margin: 0 auto 22px;
+    background: #F5F5F5; border-radius: 28px; padding: 10px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 18px 50px rgba(224,32,32,.28);
+  }
+  .logo-card img { width: 100%; height: 100%; object-fit: contain; border-radius: 18px; }
+  .logo-fb { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #0A0A0A; line-height: 1; }
+  .logo-fb span { color: var(--red); }
+  .pill-m {
+    display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: #ff6b6b; background: rgba(224,32,32,.12); border: 1px solid rgba(224,32,32,.35);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .hero-m h1 {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
+    font-size: clamp(42px, 10vw, 68px); line-height: 1; letter-spacing: 1px; margin-bottom: 14px;
+  }
+  .hero-m h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #ff4d4d, #E02020);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-m p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.62); max-width: 520px; margin: 0 auto 20px; }
+  .chips-m { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .chips-m span {
+    font-size: 12px; color: rgba(255,255,255,.75);
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(6px);
+  }
+
+  .alert-box {
+    background: rgba(224,32,32,.08); border: 1px solid rgba(224,32,32,.35);
+    border-left: 4px solid var(--red); border-radius: 16px;
+  }
+  .alert-box h2 { color: #ff6b6b; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 16px; text-transform: none; letter-spacing: 0; }
+  .alert-box p { color: rgba(255,255,255,.7); }
+  .alert-box strong { color: #fff; }
+
+  .section-label { font-family: 'Outfit', sans-serif; font-weight: 600; color: #ff6b6b; }
+  .section-label::after { background: rgba(255,255,255,.1); }
+
+  .step-item {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px; backdrop-filter: blur(6px);
+  }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 38px; color: #ff4d4d; }
+  .step-text { color: rgba(255,255,255,.65); }
+  .step-text strong { color: #fff; }
+
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+    border: 1px solid rgba(255,255,255,.09); border-radius: 20px;
+    backdrop-filter: blur(8px);
+  }
+  .card:hover { border-color: rgba(224,32,32,.55); box-shadow: 0 14px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(224,32,32,.25); transform: translateY(-3px); }
+  .card-header { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .card-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 17px; text-transform: none; color: #fff; }
+  .card-subtitle { color: rgba(255,255,255,.5); }
+  .card-icon { border-radius: 12px; background: rgba(255,255,255,.08); }
+  .card-icon.red { background: var(--red); }
+  .card-desc { color: rgba(255,255,255,.62); }
+  .card-desc strong { color: #fff; }
+
+  .card-tag { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); color: rgba(255,255,255,.7); }
+  .card-tag.special { background: rgba(255,196,0,.1); border-color: rgba(255,196,0,.35); color: #ffd666; }
+
+  .note-box { background: rgba(224,32,32,.1); border: 1px solid rgba(224,32,32,.35); border-left: 4px solid var(--red); color: rgba(255,255,255,.78); border-radius: 12px; }
+  .note-box strong { color: #fff; }
+  .note-soft { background: rgba(255,255,255,.05); color: rgba(255,255,255,.65); border-radius: 12px; }
+  .note-soft strong { color: #fff; }
+
+  .btn-link {
+    background: #fff; color: #0A0A0A; border-radius: 12px;
+    font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: .3px;
+  }
+  .btn-link:hover { background: #ffe3e3; transform: translateY(-1px); }
+  .btn-link.red-btn { background: linear-gradient(135deg, #ff4d4d, #E02020); color: #fff; }
+  .btn-link.red-btn:hover { background: linear-gradient(135deg, #ff6666, #c81a1a); }
+  .btn-static {
+    background: rgba(255,255,255,.04); color: rgba(255,255,255,.8);
+    border: 1.5px dashed rgba(255,255,255,.25); border-radius: 12px;
+    font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 13px; text-transform: none;
+  }
+
+  .cta-section {
+    background: linear-gradient(160deg, #1a1a1a, #0d0d0d);
+    border: 1px solid rgba(224,32,32,.4); border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(224,32,32,.15);
+  }
+  .cta-section h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; letter-spacing: 1px; font-size: clamp(30px, 6vw, 42px); }
+  .btn-whatsapp { border-radius: 14px; font-family: 'Outfit', sans-serif; font-weight: 700; text-transform: none; font-size: 16px; box-shadow: 0 10px 30px rgba(37,211,102,.3); }
+
+  .id-alert { border-radius: 24px; box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 16px 50px rgba(224,32,32,.45); }
+  .id-alert h2, .id-alert .req { font-family: 'Bebas Neue', sans-serif; font-weight: 400; letter-spacing: 1px; }
+  .id-alert .req { border-radius: 14px; }
+
+  .address-box { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; }
+  .address-box strong { font-family: 'Outfit', sans-serif; text-transform: none; font-size: 16px; }
+
+  footer { background: transparent; border-top: 1px solid rgba(255,255,255,.08); }
+</style>
+</head>
+<body>
+
+<section class="hero-m">
+  <div class="logo-card">
+    <img src="logo_cachay_blanco_y_negro.jpg" alt="Cachay Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+    <div class="logo-fb" style="display:none;">CACHAY <span>STORE</span></div>
+  </div>
+  <span class="pill-m">Plataforma de estudios de crédito</span>
+  <h1>Tu próximo equipo,<br><em>a crédito</em></h1>
+  <p>Elige tu entidad, haz tu estudio y cuando tengas tu cupo aprobado escríbenos: te asesoramos con el mejor dispositivo para ti.</p>
+  <div class="chips-m">
+    <span>🏦 Varias entidades</span><span>📱 Asesoría personalizada</span><span>📍 Medellín</span>
+  </div>
+</section>
+
+<div style="max-width:720px; margin: 28px auto 0; padding: 0 20px;">
+  <div class="alert-box">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <h2>¡Importante! No aceptes el crédito todavía</h2>
+      <p>Las entidades financieras te enviarán un <strong>preaprobado</strong>. <strong>No lo apruebes aún.</strong> Primero define con certeza cuál es el dispositivo que deseas llevar a crédito. Envíanos la captura con el cupo aprobado y <strong>te asesoramos</strong> en qué dispositivo se ajusta mejor a ese valor.</p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-label">Cómo funciona</div>
+  <div class="steps-row">
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div class="step-text">Elige la entidad financiera y completa el estudio</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div class="step-text">Recibe el preaprobado — <strong>no lo apruebes aún</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div class="step-text">Envíanos la captura y te asesoramos con el mejor dispositivo</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">04</div>
+      <div class="step-text">Aprueba el crédito y recoge tu equipo</div>
+    </div>
+  </div>
+
+  <!-- ENTITY CARDS -->
+  <div class="section-label">Entidades financieras</div>
+  <div class="cards-grid">
+
+    <!-- Banco de Bogotá -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🏦</div>
+        <div>
+          <div class="card-title">Banco de Bogotá</div>
+          <div class="card-subtitle">Crédito digital bancario</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Realiza tu solicitud de crédito con Banco de Bogotá de forma digital.</p>
+        <div class="note-box">
+          <strong>⚠️ Información importante:</strong> puedes hacer la <strong>solicitud</strong>, pero <strong>no finalices el proceso ni aceptes el crédito o cupo</strong>. Debes acercarte a nuestro punto físico para continuar y finalizar tu crédito.
+        </div>
+        <a href="https://slm.bancodebogota.com/lxmz9fhi" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Iniciar estudio
+        </a>
+      </div>
+    </div>
+
+    <!-- Sumas + Pay -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">🟠</div>
+        <div>
+          <div class="card-title">Sumas + Pay</div>
+          <div class="card-subtitle">Estudio rápido y sencillo</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Completa tu solicitud de crédito a través del portal de Sumas + Pay. El proceso es rápido y 100% digital.</p>
+        <a href="https://solicitud.mundosumas.com/v2/home/main?store=11366-11366-SALA%20DE%20VENTAS%20COSTARED&seller=1047445311" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Iniciar estudio
+        </a>
+      </div>
+    </div>
+
+    <!-- Esmiopción -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">🔴</div>
+        <div>
+          <div class="card-title">EsmiOpción</div>
+          <div class="card-subtitle">Autogestión del cliente</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Plataforma de autogestión para que el cliente gestione su cupo de crédito de forma autónoma y digital.</p>
+        <a href="https://esmio.appmikro.com/customer/customer-signup" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Iniciar autogestión
+        </a>
+      </div>
+    </div>
+
+    <!-- Bancolombia -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background:#FFD500;">🟡</div>
+        <div>
+          <div class="card-title">Bancolombia</div>
+          <div class="card-subtitle">Verificación de cupo</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Consulta y verifica tu cupo disponible con Bancolombia de forma inmediata y segura.</p>
+        <a href="https://bnpl-bancolombia.payvalida.com/quotaConsultation" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Verificar cupo
+        </a>
+      </div>
+    </div>
+
+    <!-- Sistecrédito -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background:#1A3A8F;">💳</div>
+        <div>
+          <div class="card-title">Sistecrédito</div>
+          <div class="card-subtitle">Fácil, rápido y 100% digital</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Solicita tu cupo con Sistecrédito en minutos. 100% digital, sin filas y sin complicaciones.</p>
+        <a href="https://personas.sistecredito.com/" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Solicitar cupo
+        </a>
+      </div>
+    </div>
+
+    <!-- MiCredit -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">⚡</div>
+        <div>
+          <div class="card-title">MiCredit</div>
+          <div class="card-subtitle">Para reportados & sin historial</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Opción ideal para personas reportadas o sin historial crediticio. La cuota inicial depende del monto aprobado y el dispositivo elegido.</p>
+        <div class="card-tag special">⚡ Aplica con cuota inicial</div>
+        <div class="note-soft">💡 Con esta entidad se maneja un <strong>porcentaje de cuota inicial</strong> (opción para reportados) y el teléfono se <strong>enrola</strong> con la entidad.</div>
+        <a href="https://appgets.solutions/autodesk/autogestion.php?tk=eyJpZF90aWVuZGEiOjEwNCwibm9tYnJlX3RpZW5kYSI6Im1pY3JlZGl0IiwiaWRfdmVuZGVkb3IiOjE3Miwibm9tYnJlX3ZlbmRlZG9yIjoiQ0FDSEFZIFNUT1JFIn0=" target="_blank" class="btn-link red-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Iniciar autogestión
+        </a>
+      </div>
+    </div>
+
+    <!-- Alo Credit -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-logo"><img src="data:image/png;base64,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" alt="Alo Credit"></div>
+        <div>
+          <div class="card-title">Alo Credit</div>
+          <div class="card-subtitle">Disponible en tienda</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Contamos con esta entidad aliada. El estudio y el proceso se realizan <strong>únicamente en nuestro punto físico</strong>.</p>
+        <div class="card-tag special">📍 Solo en punto físico</div>
+        <div class="btn-static">🏬 Acércate a la tienda</div>
+      </div>
+    </div>
+
+    <!-- E-Credit -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-logo"><img src="data:image/png;base64,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" alt="E-Credit"></div>
+        <div>
+          <div class="card-title">E-Credit</div>
+          <div class="card-subtitle">Cash 24/7 · Disponible en tienda</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Contamos con esta entidad aliada. El estudio y el proceso se realizan <strong>únicamente en nuestro punto físico</strong>.</p>
+        <div class="card-tag special">📍 Solo en punto físico</div>
+        <div class="btn-static">🏬 Acércate a la tienda</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="step-label">Siguiente paso</div>
+    <h2>¿Ya tienes tu preaprobado?</h2>
+    <p>Envíanos la captura de pantalla con el cupo aprobado y te asesoramos sobre qué dispositivo puedes llevarte con ese valor.</p>
+    <a href="https://wa.me/573145822790?text=Hola%20Cachay%20Store%2C%20ya%20tengo%20mi%20preaprobado%20y%20quiero%20asesor%C3%ADa%20para%20elegir%20mi%20dispositivo." target="_blank" class="btn-whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Ya tengo mi preaprobado
+    </a>
+  </div>
+
+  <!-- AVISO CÉDULA -->
+  <div class="section-label">Antes de venir</div>
+
+  <div class="id-alert">
+    <div class="big-icon">🪪</div>
+    <h2>¡Muy importante!</h2>
+    <div class="req">Debe venir <span>la persona que hará el crédito</span><br>con su <span>cédula física</span></div>
+    <p>Sin la persona titular y su cédula física original <strong>no es posible realizar ni finalizar el crédito</strong>. No se aceptan fotocopias ni documentos digitales.</p>
+  </div>
+
+  <div class="address-box">
+    <div class="icon">📍</div>
+    <div>
+      <strong>Cachay Store — Nos trasladamos</strong>
+      <p>Cra 50 # 52-126, Local 101C<br>Pasaje Comercial Palace Junín<br>Medellín, Colombia</p>
+      <p style="margin-top:8px;"><a href="https://maps.app.goo.gl/g1x4NSVa6GGUrQfY7" target="_blank" style="color:#fff;font-weight:600;">Ver en Google Maps →</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 <span>Cachay Store</span> — Todos los derechos reservados
+</footer>
+
+</body>
+</html>
